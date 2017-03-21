@@ -58,6 +58,132 @@
   <audio data-key="76" id="audio-l" src="sounds/tink.wav"></audio>
 
 <script>
+  window.addEventListener("keydown", function(e) {
+    console.log(e.keyCode);
+    if (e.keyCode == 65) {
+      var audio = document.getElementById("audio-a");
+      if (!audio) return;
+
+
+      var key = document.getElementById("key-a");
+      audio.currentTime = 0;
+      audio.play();
+      key.classList.add("playing");
+    }
+	  if (e.keyCode == 83) {
+      var audio = document.getElementById("audio-s");
+      if (!audio) return;
+
+
+      var key = document.getElementById("key-s");
+      audio.currentTime = 0;
+      audio.play();
+      key.classList.add("playing");
+    }
+	  if (e.keyCode == 68) {
+      var audio = document.getElementById("audio-d");
+      if (!audio) return;
+
+
+      var key = document.getElementById("key-d");
+      audio.currentTime = 0;
+      audio.play();
+      key.classList.add("playing");
+    }
+	 if (e.keyCode == 70) {
+      var audio = document.getElementById("audio-f");
+      if (!audio) return;
+
+
+      var key = document.getElementById("key-f");
+      audio.currentTime = 0;
+      audio.play();
+      key.classList.add("playing");
+    } 
+	  if (e.keyCode == 71) {
+      var audio = document.getElementById("audio-g");
+      if (!audio) return;
+
+
+      var key = document.getElementById("key-g");
+      audio.currentTime = 0;
+      audio.play();
+      key.classList.add("playing");
+    }
+	  if (e.keyCode == 72) {
+      var audio = document.getElementById("audio-h");
+      if (!audio) return;
+
+
+      var key = document.getElementById("key-h");
+      audio.currentTime = 0;
+      audio.play();
+      key.classList.add("playing");
+    }
+	  if (e.keyCode == 74) {
+      var audio = document.getElementById("audio-j");
+      if (!audio) return;
+
+
+      var key = document.getElementById("key-j");
+      audio.currentTime = 0;
+      audio.play();
+      key.classList.add("playing");
+    }
+	  if (e.keyCode == 75) {
+      var audio = document.getElementById("audio-k");
+      if (!audio) return;
+
+
+      var key = document.getElementById("key-k");
+      audio.currentTime = 0;
+      audio.play();
+      key.classList.add("playing");
+    }
+	  if (e.keyCode == 76) {
+      var audio = document.getElementById("audio-l");
+      if (!audio) return;
+
+
+      var key = document.getElementById("key-l");
+      audio.currentTime = 0;
+      audio.play();
+      key.classList.add("playing");
+    }
+  });
+	
+
+  function removeTransition(e) {
+    if (e.propertyName !== "transform") return;
+    this.classList.remove("playing");
+  }
+
+  var keyA = document.getElementById("key-a");
+  keyA.addEventListener("transitionend", removeTransition);
+	
+	var keyS = document.getElementById("key-s");
+  keyS.addEventListener("transitionend", removeTransition);
+	
+	var keyD = document.getElementById("key-d");
+  keyD.addEventListener("transitionend", removeTransition);
+	
+	var keyF = document.getElementById("key-f");
+  keyF.addEventListener("transitionend", removeTransition);
+	
+	var keyG = document.getElementById("key-g");
+  keyG.addEventListener("transitionend", removeTransition);
+	
+	var keyH = document.getElementById("key-h");
+  keyH.addEventListener("transitionend", removeTransition);
+	
+	var keyJ = document.getElementById("key-j");
+  keyJ.addEventListener("transitionend", removeTransition);
+	
+	var keyK = document.getElementById("key-k");
+  keyK.addEventListener("transitionend", removeTransition);
+	
+	var keyL = document.getElementById("key-l");
+  keyL.addEventListener("transitionend", removeTransition);
 </script>
 
 
